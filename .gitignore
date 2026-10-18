@@ -18,3 +18,8 @@ backend/data/generated/*.csv
 # OS
 .DS_Store
 Thumbs.db
+
+# Eval output (regenerate against a live deployment)
+backend/eval_results.json
+# Public Firebase web config for the build (no secrets) may be committed
+!frontend/.env.production

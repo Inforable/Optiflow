@@ -1,0 +1,15 @@
+.git
+**/node_modules
+**/.venv
+**/__pycache__
+**/*.pyc
+.pytest_cache
+**/.pytest_cache
+frontend/dist
+backend/static
+backend/data/generated/*.csv
+# backend secrets (frontend Vite env files hold only the public Firebase web config)
+.env
+backend/.env
+*.key.json
+service-account*.json

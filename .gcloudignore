@@ -1,0 +1,18 @@
+# Files excluded from `gcloud run deploy --source .` uploads.
+# Explicit file so frontend/.env.production (public Firebase web config only) IS uploaded,
+# which a .gitignore-derived default would skip.
+.git
+.gitignore
+**/node_modules
+**/.venv
+**/__pycache__
+**/*.pyc
+.pytest_cache
+frontend/dist
+backend/static
+backend/data/generated/*.csv
+backend/eval_results.json
+.env
+backend/.env
+*.key.json
+service-account*.json

@@ -1,0 +1,27 @@
+{
+  "_note": "Synthetic test records.",
+  "tests": [
+    {
+      "testDate": "2026-09-01",
+      "pump": "P-104B",
+      "result": "pass",
+      "startSeconds": 2.1,
+      "technician": "Joko"
+    },
+    {
+      "testDate": "2026-09-01",
+      "pump": "P-105",
+      "result": "pass",
+      "startSeconds": 2.8,
+      "batteryV": 226,
+      "technician": "Joko"
+    },
+    {
+      "testDate": "2026-07-30",
+      "pump": "P-104B",
+      "result": "pass",
+      "startSeconds": 2.0,
+      "technician": "Andi"
+    }
+  ]
+}

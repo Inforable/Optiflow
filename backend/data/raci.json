@@ -1,0 +1,38 @@
+{
+  "_note": "Synthetic RACI.",
+  "rules": [
+    {
+      "assetClass": "lube_oil_filter",
+      "failureMode": "*",
+      "shift": "*",
+      "R": "engineer",
+      "A": "manager"
+    },
+    {
+      "assetClass": "lube_oil_cooler",
+      "failureMode": "*",
+      "shift": "*",
+      "R": "mechanical_shift_b",
+      "A": "manager"
+    },
+    {
+      "assetClass": "autostart_circuit",
+      "failureMode": "*",
+      "shift": "*",
+      "R": "engineer",
+      "A": "manager"
+    },
+    {
+      "assetClass": "lube_oil",
+      "failureMode": "*",
+      "shift": "*",
+      "R": "engineer",
+      "A": "manager"
+    }
+  ],
+  "names": {
+    "engineer": "Joko, Field Engineer",
+    "mechanical_shift_b": "Mechanical Shift B",
+    "manager": "Dimas, Maintenance Supervisor"
+  }
+}

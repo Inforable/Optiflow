@@ -1,0 +1,1640 @@
+{
+  "nodes": [
+    {
+      "id": "LO-01",
+      "type": "system",
+      "label": "Lube-oil console LO-01 (ST-01)",
+      "props": {}
+    },
+    {
+      "id": "TK-01",
+      "type": "component",
+      "label": "Reservoir",
+      "props": {
+        "kind": "reservoir"
+      }
+    },
+    {
+      "id": "OIL",
+      "type": "component",
+      "label": "Lube oil (ISO VG 32 turbine oil)",
+      "props": {
+        "kind": "fluid"
+      }
+    },
+    {
+      "id": "P-104A",
+      "type": "component",
+      "label": "Main AC lube-oil pump",
+      "props": {
+        "kind": "pump"
+      }
+    },
+    {
+      "id": "P-104B",
+      "type": "component",
+      "label": "Standby AC lube-oil pump",
+      "props": {
+        "kind": "pump"
+      }
+    },
+    {
+      "id": "P-105",
+      "type": "component",
+      "label": "DC emergency lube-oil pump",
+      "props": {
+        "kind": "pump"
+      }
+    },
+    {
+      "id": "F-101A",
+      "type": "component",
+      "label": "Duplex filter side A",
+      "props": {
+        "kind": "filter"
+      }
+    },
+    {
+      "id": "F-101B",
+      "type": "component",
+      "label": "Duplex filter side B",
+      "props": {
+        "kind": "filter"
+      }
+    },
+    {
+      "id": "E-101A",
+      "type": "component",
+      "label": "Oil cooler A",
+      "props": {
+        "kind": "cooler"
+      }
+    },
+    {
+      "id": "E-101B",
+      "type": "component",
+      "label": "Oil cooler B",
+      "props": {
+        "kind": "cooler"
+      }
+    },
+    {
+      "id": "PCV-101",
+      "type": "component",
+      "label": "Header pressure control valve",
+      "props": {
+        "kind": "valve"
+      }
+    },
+    {
+      "id": "HEADER",
+      "type": "component",
+      "label": "Lube-oil header",
+      "props": {
+        "kind": "header"
+      }
+    },
+    {
+      "id": "BRG-1",
+      "type": "component",
+      "label": "Journal bearing 1",
+      "props": {
+        "kind": "bearing"
+      }
+    },
+    {
+      "id": "BRG-2",
+      "type": "component",
+      "label": "Journal bearing 2",
+      "props": {
+        "kind": "bearing"
+      }
+    },
+    {
+      "id": "BRG-T",
+      "type": "component",
+      "label": "Thrust bearing",
+      "props": {
+        "kind": "bearing"
+      }
+    },
+    {
+      "id": "PSL-104",
+      "type": "component",
+      "label": "Low header pressure switch (1.2 barg)",
+      "props": {
+        "kind": "switch"
+      }
+    },
+    {
+      "id": "PSLL-104",
+      "type": "component",
+      "label": "Low-low header pressure switch (0.8 barg)",
+      "props": {
+        "kind": "switch"
+      }
+    },
+    {
+      "id": "K3",
+      "type": "component",
+      "label": "Standby start relay",
+      "props": {
+        "kind": "relay"
+      }
+    },
+    {
+      "id": "K5",
+      "type": "component",
+      "label": "Emergency start relay",
+      "props": {
+        "kind": "relay"
+      }
+    },
+    {
+      "id": "KM-104A",
+      "type": "component",
+      "label": "Contactor P-104A",
+      "props": {
+        "kind": "contactor"
+      }
+    },
+    {
+      "id": "KM-104B",
+      "type": "component",
+      "label": "Contactor P-104B",
+      "props": {
+        "kind": "contactor"
+      }
+    },
+    {
+      "id": "KM-105",
+      "type": "component",
+      "label": "DC contactor P-105",
+      "props": {
+        "kind": "contactor"
+      }
+    },
+    {
+      "id": "BAT-220V",
+      "type": "component",
+      "label": "220 VDC battery",
+      "props": {
+        "kind": "battery"
+      }
+    },
+    {
+      "id": "MCC-2",
+      "type": "component",
+      "label": "Motor control centre 2",
+      "props": {
+        "kind": "mcc"
+      }
+    },
+    {
+      "id": "TR-2",
+      "type": "component",
+      "label": "Plant transformer TR-2",
+      "props": {
+        "kind": "transformer"
+      }
+    },
+    {
+      "id": "PT-104",
+      "type": "tag",
+      "label": "PT-104 Header pressure",
+      "props": {}
+    },
+    {
+      "id": "PDT-101",
+      "type": "tag",
+      "label": "PDT-101 Filter differential pressure",
+      "props": {}
+    },
+    {
+      "id": "PT-106",
+      "type": "tag",
+      "label": "PT-106 P-104A discharge pressure",
+      "props": {}
+    },
+    {
+      "id": "IT-104A",
+      "type": "tag",
+      "label": "IT-104A P-104A motor current",
+      "props": {}
+    },
+    {
+      "id": "VT-104A",
+      "type": "tag",
+      "label": "VT-104A P-104A vibration",
+      "props": {}
+    },
+    {
+      "id": "TT-102",
+      "type": "tag",
+      "label": "TT-102 Oil temperature after cooler",
+      "props": {}
+    },
+    {
+      "id": "TT-103",
+      "type": "tag",
+      "label": "TT-103 Cooling water in",
+      "props": {}
+    },
+    {
+      "id": "TT-104",
+      "type": "tag",
+      "label": "TT-104 Cooling water out",
+      "props": {}
+    },
+    {
+      "id": "LT-101",
+      "type": "tag",
+      "label": "LT-101 Reservoir level",
+      "props": {}
+    },
+    {
+      "id": "TE-201",
+      "type": "tag",
+      "label": "TE-201 Journal bearing 1 temperature",
+      "props": {}
+    },
+    {
+      "id": "TE-202",
+      "type": "tag",
+      "label": "TE-202 Journal bearing 2 temperature",
+      "props": {}
+    },
+    {
+      "id": "TE-203",
+      "type": "tag",
+      "label": "TE-203 Thrust active pad temperature",
+      "props": {}
+    },
+    {
+      "id": "TE-204",
+      "type": "tag",
+      "label": "TE-204 Thrust inactive pad temperature",
+      "props": {}
+    },
+    {
+      "id": "ZT-205",
+      "type": "tag",
+      "label": "ZT-205 Thrust position",
+      "props": {}
+    },
+    {
+      "id": "WATER-PPM",
+      "type": "tag",
+      "label": "WATER-PPM Water in oil (lab)",
+      "props": {}
+    },
+    {
+      "id": "F1",
+      "type": "failure_mode",
+      "label": "F1 Filter clogging",
+      "props": {}
+    },
+    {
+      "id": "F2",
+      "type": "failure_mode",
+      "label": "F2 Water ingress",
+      "props": {}
+    },
+    {
+      "id": "F3",
+      "type": "failure_mode",
+      "label": "F3 Pump wear or relief valve passing",
+      "props": {}
+    },
+    {
+      "id": "F4",
+      "type": "failure_mode",
+      "label": "F4 External leak",
+      "props": {}
+    },
+    {
+      "id": "F5",
+      "type": "failure_mode",
+      "label": "F5 Oil cooler fouling",
+      "props": {}
+    },
+    {
+      "id": "F6",
+      "type": "failure_mode",
+      "label": "F6 Standby pump failed to auto-start",
+      "props": {}
+    },
+    {
+      "id": "F7",
+      "type": "failure_mode",
+      "label": "F7 Oxidation and varnish",
+      "props": {}
+    },
+    {
+      "id": "F8",
+      "type": "failure_mode",
+      "label": "F8 P-104A bearing degradation",
+      "props": {}
+    },
+    {
+      "id": "F9",
+      "type": "failure_mode",
+      "label": "F9 Motor overheating",
+      "props": {}
+    },
+    {
+      "id": "F10",
+      "type": "failure_mode",
+      "label": "F10 Transmitter drift",
+      "props": {}
+    },
+    {
+      "id": "F11",
+      "type": "failure_mode",
+      "label": "F11 Foaming or air entrainment",
+      "props": {}
+    },
+    {
+      "id": "F12",
+      "type": "failure_mode",
+      "label": "F12 Bearing wipe",
+      "props": {}
+    },
+    {
+      "id": "R-T1",
+      "type": "rule",
+      "label": "R-T1 Turbine oil limits (ASTM D4378 via ExxonMobil guide)",
+      "props": {}
+    },
+    {
+      "id": "R-T2",
+      "type": "rule",
+      "label": "R-T2 ISO 4406 cleanliness code",
+      "props": {}
+    },
+    {
+      "id": "R-T3",
+      "type": "rule",
+      "label": "R-T3 Bearing temperature vs babbitt limit",
+      "props": {}
+    },
+    {
+      "id": "R-T4",
+      "type": "rule",
+      "label": "R-T4 Standby and DC pump auto-start readiness (API 614 logic)",
+      "props": {}
+    },
+    {
+      "id": "R-T5",
+      "type": "rule",
+      "label": "R-T5 Pressure-path classifier",
+      "props": {}
+    },
+    {
+      "id": "R-P1",
+      "type": "rule",
+      "label": "R-P1 Pump vibration zones (ISO 10816-7)",
+      "props": {}
+    },
+    {
+      "id": "R-P8",
+      "type": "rule",
+      "label": "R-P8 Motor overheating: load vs cooling vs supply",
+      "props": {}
+    },
+    {
+      "id": "R4",
+      "type": "rule",
+      "label": "R4 Voltage unbalance (NEMA MG-1)",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-01 §2",
+      "type": "sop",
+      "label": "SOP-LO-01 §2 Normal operating values",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-02 §1",
+      "type": "sop",
+      "label": "SOP-LO-02 §1 When to change over the filter",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-02 §3.1",
+      "type": "sop",
+      "label": "SOP-LO-02 §3.1 Prepare standby filter element",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-02 §3.2",
+      "type": "sop",
+      "label": "SOP-LO-02 §3.2 Switch filter transfer valve",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-02 §3.3",
+      "type": "sop",
+      "label": "SOP-LO-02 §3.3 Confirm filter dP and header pressure",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-02 §4",
+      "type": "sop",
+      "label": "SOP-LO-02 §4 Inspect removed element",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-03 §2",
+      "type": "sop",
+      "label": "SOP-LO-03 §2 Switch to standby cooler",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-03 §3",
+      "type": "sop",
+      "label": "SOP-LO-03 §3 Cooler leak check",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-03 §5",
+      "type": "sop",
+      "label": "SOP-LO-03 §5 Plug or retube cooler at outage",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-04 §2",
+      "type": "sop",
+      "label": "SOP-LO-04 §2 Reservoir drain sample and photo",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-04 §3",
+      "type": "sop",
+      "label": "SOP-LO-04 §3 Hot-plate crackle test",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-04 §4",
+      "type": "sop",
+      "label": "SOP-LO-04 §4 Lab sample",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-05 §1",
+      "type": "sop",
+      "label": "SOP-LO-05 §1 Auto-start test interval (30 days)",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-05 §2",
+      "type": "sop",
+      "label": "SOP-LO-05 §2 P-104B auto-start test",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-05 §3",
+      "type": "sop",
+      "label": "SOP-LO-05 §3 P-105 DC pump test",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-06 §3",
+      "type": "sop",
+      "label": "SOP-LO-06 §3 Run purifier until water below 500 ppm",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-07 §2",
+      "type": "sop",
+      "label": "SOP-LO-07 §2 Bearing temperature: check oil supply",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-08 §1",
+      "type": "sop",
+      "label": "SOP-LO-08 §1 Pump vibration check",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-08 §2",
+      "type": "sop",
+      "label": "SOP-LO-08 §2 Motor current check",
+      "props": {}
+    },
+    {
+      "id": "SOP-LO-08 §4",
+      "type": "sop",
+      "label": "SOP-LO-08 §4 Relief valve check",
+      "props": {}
+    },
+    {
+      "id": "INC-2022-031",
+      "type": "incident",
+      "label": "INC-2022-031 Bearing wipe",
+      "props": {
+        "description": "Journal bearing 1 wiped after slow header pressure decay went unnoticed; filter found loaded with emulsified sludge",
+        "capa": "Retubed leaking cooler; added header pressure trend review",
+        "capaEffective": true,
+        "downtimeH": 72
+      }
+    },
+    {
+      "id": "INC-2023-008",
+      "type": "incident",
+      "label": "INC-2023-008 Bearing wipe",
+      "props": {
+        "description": "Bearing wipe on ST-02 after standby pump failed to start on low pressure",
+        "capa": "Replaced contactor; enforced monthly auto-start test",
+        "capaEffective": true,
+        "downtimeH": 96
+      }
+    },
+    {
+      "id": "INC-2024-017",
+      "type": "incident",
+      "label": "INC-2024-017 Water ingress",
+      "props": {
+        "description": "Water ingress through cooler tube leak caught by hazy oil at visual check",
+        "capa": "Isolated cooler, purified oil, retubed at outage",
+        "capaEffective": true,
+        "downtimeH": 6
+      }
+    },
+    {
+      "id": "INC-2021-044",
+      "type": "incident",
+      "label": "INC-2021-044 Bearing wipe",
+      "props": {
+        "description": "Thrust bearing damage after oil starvation during pump changeover",
+        "capa": "Rewrote changeover SOP; replaced check valve",
+        "capaEffective": true,
+        "downtimeH": 48
+      }
+    },
+    {
+      "id": "INC-2024-002",
+      "type": "incident",
+      "label": "INC-2024-002 Filter clogging",
+      "props": {
+        "description": "Filter dP high from particulate after maintenance",
+        "capa": "Changed element; flushed",
+        "capaEffective": true,
+        "downtimeH": 2
+      }
+    },
+    {
+      "id": "INC-2023-021",
+      "type": "incident",
+      "label": "INC-2023-021 Pump wear or relief valve passing",
+      "props": {
+        "description": "P-104A discharge pressure low, relief valve passing",
+        "capa": "Replaced relief valve",
+        "capaEffective": true,
+        "downtimeH": 8
+      }
+    },
+    {
+      "id": "INC-2022-012",
+      "type": "incident",
+      "label": "INC-2022-012 External leak",
+      "props": {
+        "description": "Oil leak at header flange, reservoir level falling",
+        "capa": "Replaced gasket",
+        "capaEffective": true,
+        "downtimeH": 4
+      }
+    },
+    {
+      "id": "INC-2025-006",
+      "type": "incident",
+      "label": "INC-2025-006 Oil cooler fouling",
+      "props": {
+        "description": "Oil supply temperature high in dry season",
+        "capa": "Cleaned cooler tubes",
+        "capaEffective": true,
+        "downtimeH": 10
+      }
+    },
+    {
+      "id": "INC-2023-030",
+      "type": "incident",
+      "label": "INC-2023-030 Transmitter drift",
+      "props": {
+        "description": "PT-104 read low; local gauge normal",
+        "capa": "Recalibrated transmitter",
+        "capaEffective": true,
+        "downtimeH": 1
+      }
+    },
+    {
+      "id": "INC-2024-025",
+      "type": "incident",
+      "label": "INC-2024-025 P-104A bearing degradation",
+      "props": {
+        "description": "P-104A vibration rising to zone C; outer race defect",
+        "capa": "Replaced bearing",
+        "capaEffective": true,
+        "downtimeH": 12
+      }
+    },
+    {
+      "id": "INC-2022-019",
+      "type": "incident",
+      "label": "INC-2022-019 Motor overheating",
+      "props": {
+        "description": "P-104A motor hot; operator suspected filter, current showed mechanical load",
+        "capa": "Realigned and repaired pump",
+        "capaEffective": true,
+        "downtimeH": 9
+      }
+    },
+    {
+      "id": "INC-2025-011",
+      "type": "incident",
+      "label": "INC-2025-011 Oxidation and varnish",
+      "props": {
+        "description": "RPVOT dropped toward 25% of new; varnish on filter",
+        "capa": "Oil top-up and varnish removal",
+        "capaEffective": true,
+        "downtimeH": 16
+      }
+    },
+    {
+      "id": "INC-2021-008",
+      "type": "incident",
+      "label": "INC-2021-008 Foaming or air entrainment",
+      "props": {
+        "description": "Foam in reservoir sight glass after wrong top-up oil",
+        "capa": "Drained and refilled",
+        "capaEffective": true,
+        "downtimeH": 20
+      }
+    },
+    {
+      "id": "INC-2024-031",
+      "type": "incident",
+      "label": "INC-2024-031 Standby pump failed to auto-start",
+      "props": {
+        "description": "P-105 DC pump slow to start in test; weak battery",
+        "capa": "Replaced battery bank",
+        "capaEffective": true,
+        "downtimeH": 3
+      }
+    },
+    {
+      "id": "INC-2023-015",
+      "type": "incident",
+      "label": "INC-2023-015 Water ingress",
+      "props": {
+        "description": "Gland steam leak raised water in oil",
+        "capa": "Repaired gland seal; purified oil",
+        "capaEffective": true,
+        "downtimeH": 14
+      }
+    },
+    {
+      "id": "INC-2022-027",
+      "type": "incident",
+      "label": "INC-2022-027 Filter clogging",
+      "props": {
+        "description": "Filter clogging recurred within a week",
+        "capa": "Varnish removal added to CAPA",
+        "capaEffective": false,
+        "downtimeH": 5
+      }
+    },
+    {
+      "id": "INC-2025-019",
+      "type": "incident",
+      "label": "INC-2025-019 Oil cooler fouling",
+      "props": {
+        "description": "Cooler fouling, TT-102 near high alarm",
+        "capa": "Chemical cleaning",
+        "capaEffective": true,
+        "downtimeH": 7
+      }
+    },
+    {
+      "id": "INC-2021-033",
+      "type": "incident",
+      "label": "INC-2021-033 Pump wear or relief valve passing",
+      "props": {
+        "description": "Pump wear after long run hours",
+        "capa": "Overhauled pump",
+        "capaEffective": true,
+        "downtimeH": 18
+      }
+    },
+    {
+      "id": "INC-2024-008",
+      "type": "incident",
+      "label": "INC-2024-008 Motor overheating",
+      "props": {
+        "description": "Motor overheating from blocked fan cowl",
+        "capa": "Cleaned fan cowl",
+        "capaEffective": true,
+        "downtimeH": 2
+      }
+    },
+    {
+      "id": "INC-2023-040",
+      "type": "incident",
+      "label": "INC-2023-040 Transmitter drift",
+      "props": {
+        "description": "LT-101 drift after transmitter water ingress",
+        "capa": "Replaced transmitter",
+        "capaEffective": true,
+        "downtimeH": 2
+      }
+    },
+    {
+      "id": "INC-2022-005",
+      "type": "incident",
+      "label": "INC-2022-005 P-104A bearing degradation",
+      "props": {
+        "description": "Coupling misalignment raised P-104A vibration",
+        "capa": "Laser alignment",
+        "capaEffective": true,
+        "downtimeH": 6
+      }
+    },
+    {
+      "id": "INC-2025-024",
+      "type": "incident",
+      "label": "INC-2025-024 External leak",
+      "props": {
+        "description": "Small leak at filter cover O-ring",
+        "capa": "Replaced O-ring",
+        "capaEffective": true,
+        "downtimeH": 1
+      }
+    },
+    {
+      "id": "INC-2024-019",
+      "type": "incident",
+      "label": "INC-2024-019 Water ingress",
+      "props": {
+        "description": "Condensation in reservoir during monsoon",
+        "capa": "Replaced breather desiccant",
+        "capaEffective": true,
+        "downtimeH": 4
+      }
+    },
+    {
+      "id": "INC-2023-002",
+      "type": "incident",
+      "label": "INC-2023-002 Standby pump failed to auto-start",
+      "props": {
+        "description": "Auto-start test skipped two months; found relay K3 coil open",
+        "capa": "Replaced relay; test reminder",
+        "capaEffective": true,
+        "downtimeH": 2
+      }
+    },
+    {
+      "id": "INC-2021-020",
+      "type": "incident",
+      "label": "INC-2021-020 Oxidation and varnish",
+      "props": {
+        "description": "Dark oil and high TAN",
+        "capa": "Oil change",
+        "capaEffective": true,
+        "downtimeH": 24
+      }
+    },
+    {
+      "id": "INC-2022-040",
+      "type": "incident",
+      "label": "INC-2022-040 Foaming or air entrainment",
+      "props": {
+        "description": "Air entrainment from suction leak",
+        "capa": "Fixed suction leak",
+        "capaEffective": true,
+        "downtimeH": 6
+      }
+    },
+    {
+      "id": "INC-2024-036",
+      "type": "incident",
+      "label": "INC-2024-036 Filter clogging",
+      "props": {
+        "description": "Filter element collapsed at high dP",
+        "capa": "Changeover at 1.0 bar enforced",
+        "capaEffective": true,
+        "downtimeH": 8
+      }
+    },
+    {
+      "id": "INC-2025-002",
+      "type": "incident",
+      "label": "INC-2025-002 Bearing wipe",
+      "props": {
+        "description": "Bearing temperature spike during start-up",
+        "capa": "Revised start-up checklist",
+        "capaEffective": true,
+        "downtimeH": 30
+      }
+    },
+    {
+      "id": "INC-2023-027",
+      "type": "incident",
+      "label": "INC-2023-027 Pump wear or relief valve passing",
+      "props": {
+        "description": "Relief valve chatter",
+        "capa": "Replaced spring",
+        "capaEffective": true,
+        "downtimeH": 3
+      }
+    },
+    {
+      "id": "INC-2024-040",
+      "type": "incident",
+      "label": "INC-2024-040 Oil cooler fouling",
+      "props": {
+        "description": "Cooler water-side scaling",
+        "capa": "Descaled cooler",
+        "capaEffective": true,
+        "downtimeH": 9
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "LO-01",
+      "target": "TK-01",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "OIL",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "P-104A",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "P-104B",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "P-105",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "F-101A",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "F-101B",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "E-101A",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "E-101B",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "PCV-101",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "HEADER",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "BRG-1",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "BRG-2",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "BRG-T",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "PSL-104",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "PSLL-104",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "K3",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "K5",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "KM-104A",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "KM-104B",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "KM-105",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "BAT-220V",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "MCC-2",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "LO-01",
+      "target": "TR-2",
+      "type": "HAS_PART"
+    },
+    {
+      "source": "TK-01",
+      "target": "P-104A",
+      "type": "FEEDS"
+    },
+    {
+      "source": "TK-01",
+      "target": "P-104B",
+      "type": "FEEDS"
+    },
+    {
+      "source": "TK-01",
+      "target": "P-105",
+      "type": "FEEDS"
+    },
+    {
+      "source": "P-104A",
+      "target": "F-101A",
+      "type": "FEEDS"
+    },
+    {
+      "source": "P-104B",
+      "target": "F-101A",
+      "type": "FEEDS"
+    },
+    {
+      "source": "F-101A",
+      "target": "E-101A",
+      "type": "FEEDS"
+    },
+    {
+      "source": "F-101B",
+      "target": "E-101B",
+      "type": "FEEDS"
+    },
+    {
+      "source": "E-101A",
+      "target": "PCV-101",
+      "type": "FEEDS"
+    },
+    {
+      "source": "E-101B",
+      "target": "PCV-101",
+      "type": "FEEDS"
+    },
+    {
+      "source": "PCV-101",
+      "target": "HEADER",
+      "type": "FEEDS"
+    },
+    {
+      "source": "P-105",
+      "target": "HEADER",
+      "type": "FEEDS"
+    },
+    {
+      "source": "HEADER",
+      "target": "BRG-1",
+      "type": "FEEDS"
+    },
+    {
+      "source": "HEADER",
+      "target": "BRG-2",
+      "type": "FEEDS"
+    },
+    {
+      "source": "HEADER",
+      "target": "BRG-T",
+      "type": "FEEDS"
+    },
+    {
+      "source": "BRG-1",
+      "target": "TK-01",
+      "type": "DRAINS_TO"
+    },
+    {
+      "source": "BRG-2",
+      "target": "TK-01",
+      "type": "DRAINS_TO"
+    },
+    {
+      "source": "BRG-T",
+      "target": "TK-01",
+      "type": "DRAINS_TO"
+    },
+    {
+      "source": "TK-01",
+      "target": "OIL",
+      "type": "HOLDS"
+    },
+    {
+      "source": "OIL",
+      "target": "F-101A",
+      "type": "FLOWS_THROUGH"
+    },
+    {
+      "source": "OIL",
+      "target": "E-101A",
+      "type": "FLOWS_THROUGH"
+    },
+    {
+      "source": "OIL",
+      "target": "HEADER",
+      "type": "FLOWS_THROUGH"
+    },
+    {
+      "source": "E-101A",
+      "target": "OIL",
+      "type": "EXCHANGES_HEAT_WITH"
+    },
+    {
+      "source": "PSL-104",
+      "target": "HEADER",
+      "type": "SENSES"
+    },
+    {
+      "source": "PSLL-104",
+      "target": "HEADER",
+      "type": "SENSES"
+    },
+    {
+      "source": "PSL-104",
+      "target": "K3",
+      "type": "TRIGGERS"
+    },
+    {
+      "source": "K3",
+      "target": "KM-104B",
+      "type": "ENERGIZES"
+    },
+    {
+      "source": "KM-104B",
+      "target": "P-104B",
+      "type": "STARTS"
+    },
+    {
+      "source": "PSLL-104",
+      "target": "K5",
+      "type": "TRIGGERS"
+    },
+    {
+      "source": "K5",
+      "target": "KM-105",
+      "type": "ENERGIZES"
+    },
+    {
+      "source": "KM-105",
+      "target": "P-105",
+      "type": "STARTS"
+    },
+    {
+      "source": "BAT-220V",
+      "target": "KM-105",
+      "type": "POWERS"
+    },
+    {
+      "source": "MCC-2",
+      "target": "KM-104A",
+      "type": "POWERS"
+    },
+    {
+      "source": "MCC-2",
+      "target": "KM-104B",
+      "type": "POWERS"
+    },
+    {
+      "source": "TR-2",
+      "target": "MCC-2",
+      "type": "POWERS"
+    },
+    {
+      "source": "KM-104A",
+      "target": "P-104A",
+      "type": "STARTS"
+    },
+    {
+      "source": "HEADER",
+      "target": "PT-104",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "F-101A",
+      "target": "PDT-101",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "P-104A",
+      "target": "PT-106",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "P-104A",
+      "target": "IT-104A",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "P-104A",
+      "target": "VT-104A",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "E-101A",
+      "target": "TT-102",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "E-101A",
+      "target": "TT-103",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "E-101A",
+      "target": "TT-104",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "TK-01",
+      "target": "LT-101",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "BRG-1",
+      "target": "TE-201",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "BRG-2",
+      "target": "TE-202",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "BRG-T",
+      "target": "TE-203",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "BRG-T",
+      "target": "TE-204",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "BRG-T",
+      "target": "ZT-205",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "OIL",
+      "target": "WATER-PPM",
+      "type": "MEASURED_BY"
+    },
+    {
+      "source": "F-101A",
+      "target": "F1",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "OIL",
+      "target": "F2",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "E-101A",
+      "target": "F2",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "P-104A",
+      "target": "F3",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "HEADER",
+      "target": "F4",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "TK-01",
+      "target": "F4",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "E-101A",
+      "target": "F5",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "PSL-104",
+      "target": "F6",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "K3",
+      "target": "F6",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "KM-104B",
+      "target": "F6",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "OIL",
+      "target": "F7",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "P-104A",
+      "target": "F8",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "P-104A",
+      "target": "F9",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "PT-104",
+      "target": "F10",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "OIL",
+      "target": "F11",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "BRG-1",
+      "target": "F12",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "BRG-2",
+      "target": "F12",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "BRG-T",
+      "target": "F12",
+      "type": "CAN_FAIL_AS"
+    },
+    {
+      "source": "F2",
+      "target": "R-T1",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F7",
+      "target": "R-T1",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F11",
+      "target": "R-T1",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F7",
+      "target": "R-T2",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F12",
+      "target": "R-T3",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F6",
+      "target": "R-T4",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F1",
+      "target": "R-T5",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F2",
+      "target": "R-T5",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F3",
+      "target": "R-T5",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F4",
+      "target": "R-T5",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F5",
+      "target": "R-T5",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F10",
+      "target": "R-T5",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F8",
+      "target": "R-P1",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F9",
+      "target": "R-P8",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F9",
+      "target": "R4",
+      "type": "DETECTED_BY"
+    },
+    {
+      "source": "F1",
+      "target": "SOP-LO-02 §3.2",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F1",
+      "target": "SOP-LO-02 §4",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F2",
+      "target": "SOP-LO-04 §2",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F2",
+      "target": "SOP-LO-03 §2",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F2",
+      "target": "SOP-LO-03 §3",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F2",
+      "target": "SOP-LO-06 §3",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F2",
+      "target": "SOP-LO-03 §5",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F5",
+      "target": "SOP-LO-03 §2",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F6",
+      "target": "SOP-LO-05 §2",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F6",
+      "target": "SOP-LO-05 §3",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F6",
+      "target": "SOP-LO-05 §1",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F3",
+      "target": "SOP-LO-08 §4",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F8",
+      "target": "SOP-LO-08 §1",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F9",
+      "target": "SOP-LO-08 §2",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F12",
+      "target": "SOP-LO-07 §2",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F10",
+      "target": "SOP-LO-01 §2",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F7",
+      "target": "SOP-LO-04 §4",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "F11",
+      "target": "SOP-LO-04 §2",
+      "type": "MITIGATED_BY"
+    },
+    {
+      "source": "INC-2022-031",
+      "target": "F12",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2023-008",
+      "target": "F12",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2024-017",
+      "target": "F2",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2021-044",
+      "target": "F12",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2024-002",
+      "target": "F1",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2023-021",
+      "target": "F3",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2022-012",
+      "target": "F4",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2025-006",
+      "target": "F5",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2023-030",
+      "target": "F10",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2024-025",
+      "target": "F8",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2022-019",
+      "target": "F9",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2025-011",
+      "target": "F7",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2021-008",
+      "target": "F11",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2024-031",
+      "target": "F6",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2023-015",
+      "target": "F2",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2022-027",
+      "target": "F1",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2025-019",
+      "target": "F5",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2021-033",
+      "target": "F3",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2024-008",
+      "target": "F9",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2023-040",
+      "target": "F10",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2022-005",
+      "target": "F8",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2025-024",
+      "target": "F4",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2024-019",
+      "target": "F2",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2023-002",
+      "target": "F6",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2021-020",
+      "target": "F7",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2022-040",
+      "target": "F11",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2024-036",
+      "target": "F1",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2025-002",
+      "target": "F12",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2023-027",
+      "target": "F3",
+      "type": "HAD_MODE"
+    },
+    {
+      "source": "INC-2024-040",
+      "target": "F5",
+      "type": "HAD_MODE"
+    }
+  ],
+  "highlight": []
+}

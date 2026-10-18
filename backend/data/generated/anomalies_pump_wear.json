@@ -1,0 +1,62 @@
+{
+  "scenario": "pump_wear",
+  "method": "fallback z-score vs healthy baseline (stand-in for AI.DETECT_ANOMALIES)",
+  "tags": [
+    {
+      "tag": "PT-104",
+      "anomalous": true,
+      "probability": 0.81,
+      "slopePerDay": -0.028,
+      "z": 6.65
+    },
+    {
+      "tag": "PDT-101",
+      "anomalous": false,
+      "probability": 0.004,
+      "slopePerDay": -0.0023,
+      "z": 0.04
+    },
+    {
+      "tag": "LT-101",
+      "anomalous": false,
+      "probability": 0.003,
+      "slopePerDay": 0.0188,
+      "z": 0.03
+    },
+    {
+      "tag": "TE-201",
+      "anomalous": true,
+      "probability": 0.9,
+      "slopePerDay": 0.7073,
+      "z": 9.21
+    },
+    {
+      "tag": "IT-104A",
+      "anomalous": false,
+      "probability": 0.299,
+      "slopePerDay": -0.4873,
+      "z": 2.99
+    },
+    {
+      "tag": "PT-106",
+      "anomalous": true,
+      "probability": 0.818,
+      "slopePerDay": -0.1315,
+      "z": 6.81
+    },
+    {
+      "tag": "VT-104A",
+      "anomalous": true,
+      "probability": 0.999,
+      "slopePerDay": 0.3613,
+      "z": 35.15
+    },
+    {
+      "tag": "TT-102",
+      "anomalous": false,
+      "probability": 0.058,
+      "slopePerDay": 0.0742,
+      "z": 0.58
+    }
+  ]
+}

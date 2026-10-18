@@ -1,0 +1,60 @@
+{
+  "_note": "SITE SETPOINTS (synthetic) for the fictional plant. Not standards.",
+  "PT-104": {
+    "unit": "barg",
+    "normal": 1.6,
+    "low": 1.2,
+    "lowLow": 0.8
+  },
+  "PDT-101": {
+    "unit": "bar",
+    "normal": 0.3,
+    "change": 1.0
+  },
+  "PT-106": {
+    "unit": "barg",
+    "normal": 4.5
+  },
+  "IT-104A": {
+    "unit": "A",
+    "normal": 62,
+    "fla": 70,
+    "serviceFactor": 1.15
+  },
+  "VT-104A": {
+    "unit": "mm/s",
+    "normal": 1.8,
+    "zoneA": 2.5,
+    "zoneB": 4.0,
+    "zoneC": 6.6
+  },
+  "TT-102": {
+    "unit": "degC",
+    "normal": 45,
+    "high": 55
+  },
+  "LT-101": {
+    "unit": "%",
+    "normal": 70,
+    "high": 78,
+    "low": 60
+  },
+  "TE-201": {
+    "unit": "degC",
+    "normal": 88,
+    "alarm": 115,
+    "trip": 125
+  },
+  "TE-202": {
+    "unit": "degC",
+    "normal": 86.5,
+    "alarm": 115,
+    "trip": 125
+  },
+  "WATER-PPM": {
+    "unit": "ppm",
+    "siteAction": 500,
+    "standardLimit": 1000
+  },
+  "autostartTestIntervalDays": 30
+}

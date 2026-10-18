@@ -1,0 +1,999 @@
+{
+  "$defs": {
+    "Action": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "man",
+            "machine",
+            "method",
+            "material",
+            "environment"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "quadrant": {
+          "enum": [
+            "quick_win",
+            "major",
+            "escalate",
+            "deprioritize"
+          ],
+          "title": "Quadrant",
+          "type": "string"
+        },
+        "authority": {
+          "enum": [
+            "shift",
+            "plant",
+            "ho"
+          ],
+          "title": "Authority",
+          "type": "string"
+        },
+        "timing": {
+          "enum": [
+            "now",
+            "next_shutdown"
+          ],
+          "title": "Timing",
+          "type": "string"
+        },
+        "sopCitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sopcitations",
+          "type": "array"
+        },
+        "steps": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Steps",
+          "type": "array"
+        },
+        "assigneeRole": {
+          "default": "engineer",
+          "enum": [
+            "engineer",
+            "mechanical_shift_b",
+            "manager"
+          ],
+          "title": "Assigneerole",
+          "type": "string"
+        },
+        "ticketType": {
+          "default": "corrective",
+          "enum": [
+            "evidence_request",
+            "corrective",
+            "safety_test"
+          ],
+          "title": "Tickettype",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "category",
+        "quadrant",
+        "authority",
+        "timing",
+        "sopCitations",
+        "steps"
+      ],
+      "title": "Action",
+      "type": "object"
+    },
+    "Asset": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "system": {
+          "title": "System",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "system"
+      ],
+      "title": "Asset",
+      "type": "object"
+    },
+    "Audit": {
+      "properties": {
+        "model": {
+          "default": "gemini-3.8-flash",
+          "title": "Model",
+          "type": "string"
+        },
+        "promptVersion": {
+          "default": "v1",
+          "title": "Promptversion",
+          "type": "string"
+        },
+        "cached": {
+          "default": false,
+          "title": "Cached",
+          "type": "boolean"
+        }
+      },
+      "title": "Audit",
+      "type": "object"
+    },
+    "Autostart": {
+      "properties": {
+        "ruleId": {
+          "default": "R-T4",
+          "title": "Ruleid",
+          "type": "string"
+        },
+        "marginToPslBar": {
+          "title": "Margintopslbar",
+          "type": "number"
+        },
+        "lastTestDays": {
+          "title": "Lasttestdays",
+          "type": "integer"
+        },
+        "sopIntervalDays": {
+          "title": "Sopintervaldays",
+          "type": "integer"
+        },
+        "verdict": {
+          "enum": [
+            "G",
+            "NG",
+            "UNVERIFIED"
+          ],
+          "title": "Verdict",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "marginToPslBar",
+        "lastTestDays",
+        "sopIntervalDays",
+        "verdict",
+        "label"
+      ],
+      "title": "Autostart",
+      "type": "object"
+    },
+    "Decision": {
+      "properties": {
+        "actions": {
+          "items": {
+            "$ref": "#/$defs/Action"
+          },
+          "title": "Actions",
+          "type": "array"
+        },
+        "approvedActionIds": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Approvedactionids",
+          "type": "array"
+        },
+        "timingNote": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Timingnote"
+        }
+      },
+      "title": "Decision",
+      "type": "object"
+    },
+    "Detection": {
+      "properties": {
+        "method": {
+          "title": "Method",
+          "type": "string"
+        },
+        "tags": {
+          "items": {
+            "$ref": "#/$defs/TagDetection"
+          },
+          "title": "Tags",
+          "type": "array"
+        },
+        "driftCheck": {
+          "$ref": "#/$defs/DriftCheck"
+        }
+      },
+      "required": [
+        "method",
+        "tags",
+        "driftCheck"
+      ],
+      "title": "Detection",
+      "type": "object"
+    },
+    "Diagnosis": {
+      "properties": {
+        "matrix": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Matrix"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "rootCause": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RootCause"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "evidenceRequests": {
+          "items": {
+            "$ref": "#/$defs/EvidenceRequest"
+          },
+          "title": "Evidencerequests",
+          "type": "array"
+        }
+      },
+      "title": "Diagnosis",
+      "type": "object"
+    },
+    "DriftCheck": {
+      "properties": {
+        "verdict": {
+          "enum": [
+            "physical",
+            "instrument_suspect"
+          ],
+          "title": "Verdict",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "verdict",
+        "reason"
+      ],
+      "title": "DriftCheck",
+      "type": "object"
+    },
+    "Evidence": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "ticketId": {
+          "title": "Ticketid",
+          "type": "string"
+        },
+        "caseId": {
+          "title": "Caseid",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "photo",
+            "voice",
+            "gauge"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "storagePath": {
+          "title": "Storagepath",
+          "type": "string"
+        },
+        "uploadedAt": {
+          "title": "Uploadedat",
+          "type": "string"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "judged": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Judgement"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "by": {
+          "default": "engineer",
+          "title": "By",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "ticketId",
+        "caseId",
+        "kind",
+        "storagePath",
+        "uploadedAt"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "EvidenceRequest": {
+      "properties": {
+        "category": {
+          "enum": [
+            "man",
+            "machine",
+            "method",
+            "material",
+            "environment"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "instruction": {
+          "title": "Instruction",
+          "type": "string"
+        },
+        "sopRef": {
+          "title": "Sopref",
+          "type": "string"
+        },
+        "ticketId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ticketid"
+        }
+      },
+      "required": [
+        "category",
+        "instruction",
+        "sopRef"
+      ],
+      "title": "EvidenceRequest",
+      "type": "object"
+    },
+    "Impact": {
+      "properties": {
+        "lossPerMinUsd": {
+          "default": 0.0,
+          "title": "Lossperminusd",
+          "type": "number"
+        },
+        "exposureUsd": {
+          "title": "Exposureusd",
+          "type": "number"
+        },
+        "formula": {
+          "title": "Formula",
+          "type": "string"
+        },
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        }
+      },
+      "required": [
+        "exposureUsd",
+        "formula",
+        "assumptions"
+      ],
+      "title": "Impact",
+      "type": "object"
+    },
+    "Judgement": {
+      "properties": {
+        "verdict": {
+          "enum": [
+            "G",
+            "NG",
+            "UNVERIFIED"
+          ],
+          "title": "Verdict",
+          "type": "string"
+        },
+        "finding": {
+          "title": "Finding",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "confidence": {
+          "title": "Confidence",
+          "type": "number"
+        },
+        "transcript": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transcript"
+        }
+      },
+      "required": [
+        "verdict",
+        "finding",
+        "reason",
+        "confidence"
+      ],
+      "title": "Judgement",
+      "type": "object"
+    },
+    "Matrix": {
+      "properties": {
+        "man": {
+          "$ref": "#/$defs/MatrixCell"
+        },
+        "machine": {
+          "$ref": "#/$defs/MatrixCell"
+        },
+        "method": {
+          "$ref": "#/$defs/MatrixCell"
+        },
+        "material": {
+          "$ref": "#/$defs/MatrixCell"
+        },
+        "environment": {
+          "$ref": "#/$defs/MatrixCell"
+        }
+      },
+      "required": [
+        "man",
+        "machine",
+        "method",
+        "material",
+        "environment"
+      ],
+      "title": "Matrix",
+      "type": "object"
+    },
+    "MatrixCell": {
+      "properties": {
+        "verdict": {
+          "enum": [
+            "G",
+            "NG",
+            "UNVERIFIED"
+          ],
+          "title": "Verdict",
+          "type": "string"
+        },
+        "evidence": {
+          "title": "Evidence",
+          "type": "string"
+        },
+        "citations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Citations",
+          "type": "array"
+        },
+        "provenance": {
+          "default": "ai",
+          "enum": [
+            "ai",
+            "human"
+          ],
+          "title": "Provenance",
+          "type": "string"
+        }
+      },
+      "required": [
+        "verdict",
+        "evidence"
+      ],
+      "title": "MatrixCell",
+      "type": "object"
+    },
+    "PressurePath": {
+      "properties": {
+        "ruleId": {
+          "default": "R-T5",
+          "title": "Ruleid",
+          "type": "string"
+        },
+        "mechanism": {
+          "enum": [
+            "filter_loading",
+            "pump_or_relief_valve",
+            "external_leak",
+            "water_ingress",
+            "hot_oil_or_cooler",
+            "instrument_drift",
+            "normal"
+          ],
+          "title": "Mechanism",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "evidence": {
+          "title": "Evidence",
+          "type": "string"
+        }
+      },
+      "required": [
+        "mechanism",
+        "label",
+        "evidence"
+      ],
+      "title": "PressurePath",
+      "type": "object"
+    },
+    "Readings": {
+      "properties": {
+        "interval": {
+          "default": "1h",
+          "title": "Interval",
+          "type": "string"
+        },
+        "series": {
+          "additionalProperties": {
+            "items": {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "title": "Series",
+          "type": "object"
+        },
+        "setpoints": {
+          "additionalProperties": {
+            "$ref": "#/$defs/TagSetpoint"
+          },
+          "title": "Setpoints",
+          "type": "object"
+        },
+        "postRepairFrom": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Postrepairfrom"
+        }
+      },
+      "required": [
+        "series"
+      ],
+      "title": "Readings",
+      "type": "object"
+    },
+    "RootCause": {
+      "properties": {
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "path": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Path",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text",
+        "path"
+      ],
+      "title": "RootCause",
+      "type": "object"
+    },
+    "TagDetection": {
+      "properties": {
+        "tag": {
+          "title": "Tag",
+          "type": "string"
+        },
+        "anomalous": {
+          "title": "Anomalous",
+          "type": "boolean"
+        },
+        "probability": {
+          "title": "Probability",
+          "type": "number"
+        },
+        "slopePerDay": {
+          "title": "Slopeperday",
+          "type": "number"
+        }
+      },
+      "required": [
+        "tag",
+        "anomalous",
+        "probability",
+        "slopePerDay"
+      ],
+      "title": "TagDetection",
+      "type": "object"
+    },
+    "TagSetpoint": {
+      "properties": {
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "low": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Low"
+        },
+        "lowLow": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Lowlow"
+        },
+        "high": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "High"
+        },
+        "change": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Change"
+        },
+        "alarm": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Alarm"
+        },
+        "trip": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trip"
+        }
+      },
+      "required": [
+        "unit"
+      ],
+      "title": "TagSetpoint",
+      "type": "object"
+    },
+    "TraceEntry": {
+      "properties": {
+        "at": {
+          "title": "At",
+          "type": "string"
+        },
+        "step": {
+          "title": "Step",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "provenance": {
+          "default": "ai",
+          "enum": [
+            "ai",
+            "human"
+          ],
+          "title": "Provenance",
+          "type": "string"
+        }
+      },
+      "required": [
+        "at",
+        "step",
+        "summary"
+      ],
+      "title": "TraceEntry",
+      "type": "object"
+    },
+    "Verification": {
+      "properties": {
+        "status": {
+          "default": "pending",
+          "enum": [
+            "pending",
+            "verified_effective",
+            "reopened"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "checks": {
+          "items": {
+            "$ref": "#/$defs/VerificationCheck"
+          },
+          "title": "Checks",
+          "type": "array"
+        }
+      },
+      "title": "Verification",
+      "type": "object"
+    },
+    "VerificationCheck": {
+      "properties": {
+        "tag": {
+          "title": "Tag",
+          "type": "string"
+        },
+        "baseline": {
+          "title": "Baseline",
+          "type": "number"
+        },
+        "band": {
+          "title": "Band",
+          "type": "number"
+        },
+        "last": {
+          "title": "Last",
+          "type": "number"
+        },
+        "passed": {
+          "title": "Passed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "tag",
+        "baseline",
+        "band",
+        "last",
+        "passed"
+      ],
+      "title": "VerificationCheck",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "sandboxId": {
+      "title": "Sandboxid",
+      "type": "string"
+    },
+    "asset": {
+      "$ref": "#/$defs/Asset"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "open",
+        "investigating",
+        "awaiting_evidence",
+        "action_proposed",
+        "actions_approved",
+        "verified",
+        "reopened"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "openedAt": {
+      "title": "Openedat",
+      "type": "string"
+    },
+    "syntheticDataNote": {
+      "title": "Syntheticdatanote",
+      "type": "string"
+    },
+    "readings": {
+      "$ref": "#/$defs/Readings"
+    },
+    "detection": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Detection"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "pressurePath": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/PressurePath"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "autostart": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Autostart"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "impact": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Impact"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "diagnosis": {
+      "$ref": "#/$defs/Diagnosis"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "decision": {
+      "$ref": "#/$defs/Decision"
+    },
+    "ticketIds": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Ticketids",
+      "type": "array"
+    },
+    "verification": {
+      "$ref": "#/$defs/Verification"
+    },
+    "trace": {
+      "items": {
+        "$ref": "#/$defs/TraceEntry"
+      },
+      "title": "Trace",
+      "type": "array"
+    },
+    "audit": {
+      "$ref": "#/$defs/Audit"
+    }
+  },
+  "required": [
+    "id",
+    "sandboxId",
+    "asset",
+    "title",
+    "status",
+    "openedAt",
+    "syntheticDataNote",
+    "readings"
+  ],
+  "title": "Case",
+  "type": "object"
+}

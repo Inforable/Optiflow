@@ -1,0 +1,53 @@
+[
+  {
+    "id": "N-1",
+    "toRole": "manager",
+    "event": "case_opened",
+    "title": "New case C-0412",
+    "body": "Lube-oil header pressure decay on ST-01",
+    "ref": {
+      "caseId": "C-0412"
+    },
+    "read": false,
+    "at": "2026-10-18T02:00:00+07:00"
+  },
+  {
+    "id": "N-2",
+    "toRole": "engineer",
+    "event": "evidence_requested",
+    "title": "Evidence requested",
+    "body": "Oil sample photo from reservoir drain (SOP-LO-04 §2)",
+    "ref": {
+      "caseId": "C-0412",
+      "ticketId": "T-1"
+    },
+    "read": false,
+    "at": "2026-10-18T02:01:30+07:00"
+  },
+  {
+    "id": "N-3",
+    "toRole": "manager",
+    "event": "evidence_received",
+    "title": "Evidence received",
+    "body": "Oil photo judged NG: free water suspected",
+    "ref": {
+      "caseId": "C-0412",
+      "ticketId": "T-1"
+    },
+    "read": false,
+    "at": "2026-10-18T02:31:58+07:00"
+  },
+  {
+    "id": "N-4",
+    "toRole": "engineer",
+    "event": "task_assigned",
+    "title": "New task",
+    "body": "Switch duplex filter to F-101B under load",
+    "ref": {
+      "caseId": "C-0412",
+      "ticketId": "T-2"
+    },
+    "read": false,
+    "at": "2026-10-18T02:40:05+07:00"
+  }
+]

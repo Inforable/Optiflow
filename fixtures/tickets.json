@@ -1,0 +1,167 @@
+[
+  {
+    "caseId": "C-0412",
+    "createdAt": "2026-10-18T02:01:30+07:00",
+    "id": "T-1",
+    "type": "evidence_request",
+    "title": "Oil sample photo from reservoir drain",
+    "component": "TK-01",
+    "priority": "high",
+    "dueAt": "2026-10-18T02:30:00+07:00",
+    "estimateMin": 15,
+    "assigneeRole": "engineer",
+    "assigneeName": "Joko, Field Engineer",
+    "status": "done",
+    "createdBy": "ai",
+    "checklist": [
+      {
+        "id": "s1",
+        "text": "Flush the drain valve for 5 seconds",
+        "sopRef": "SOP-LO-04 §2"
+      },
+      {
+        "id": "s2",
+        "text": "Fill a clear bottle to three quarters",
+        "sopRef": "SOP-LO-04 §2"
+      },
+      {
+        "id": "s3",
+        "text": "Photograph the bottle against a light",
+        "sopRef": "SOP-LO-04 §2"
+      },
+      {
+        "id": "s4",
+        "text": "Record a short voice note of what you see",
+        "sopRef": "SOP-LO-04 §2"
+      }
+    ],
+    "evidenceRequest": {
+      "category": "material",
+      "instruction": "Take an oil sample from the reservoir drain into a clear bottle and photograph it against a light. Add a short voice note.",
+      "sopRef": "SOP-LO-04 §2",
+      "ticketId": "T-1"
+    },
+    "report": {
+      "summary": "Oil milky and hazy; sample photographed",
+      "condition": "poor"
+    }
+  },
+  {
+    "caseId": "C-0412",
+    "createdAt": "2026-10-18T02:40:05+07:00",
+    "id": "T-2",
+    "type": "corrective",
+    "title": "Switch duplex filter to F-101B under load",
+    "component": "F-101A",
+    "priority": "high",
+    "dueAt": "2026-10-18T03:30:00+07:00",
+    "estimateMin": 30,
+    "assigneeRole": "engineer",
+    "assigneeName": "Joko, Field Engineer",
+    "status": "done",
+    "createdBy": "ai",
+    "actionId": "A1",
+    "checklist": [
+      {
+        "id": "s1",
+        "text": "Vent and fill F-101B until oil is clear at the vent",
+        "sopRef": "SOP-LO-02 §3.1"
+      },
+      {
+        "id": "s2",
+        "text": "Turn transfer valve slowly to F-101B, watch PT-104",
+        "sopRef": "SOP-LO-02 §3.2"
+      },
+      {
+        "id": "s3",
+        "text": "Confirm PDT-101 below 0.4 bar; photograph the gauge",
+        "sopRef": "SOP-LO-02 §3.3"
+      },
+      {
+        "id": "s4",
+        "text": "Photograph the removed element",
+        "sopRef": "SOP-LO-02 §4"
+      }
+    ],
+    "evidenceRequest": null,
+    "report": {
+      "summary": "Switched to F-101B; PDT-101 0.32 bar; element coated with milky sludge",
+      "condition": "fair"
+    }
+  },
+  {
+    "caseId": "C-0412",
+    "createdAt": "2026-10-18T02:40:05+07:00",
+    "id": "T-3",
+    "type": "safety_test",
+    "title": "Auto-start test P-104B and P-105",
+    "component": "PSL-104",
+    "priority": "high",
+    "dueAt": "2026-10-18T04:00:00+07:00",
+    "estimateMin": 45,
+    "assigneeRole": "engineer",
+    "assigneeName": "Joko, Field Engineer",
+    "status": "open",
+    "createdBy": "ai",
+    "actionId": "A3",
+    "checklist": [
+      {
+        "id": "s1",
+        "text": "Inform control room",
+        "sopRef": "SOP-LO-05 §2"
+      },
+      {
+        "id": "s2",
+        "text": "Operate PSL-104 test; confirm K3, KM-104B and P-104B start within 3 s",
+        "sopRef": "SOP-LO-05 §2"
+      },
+      {
+        "id": "s3",
+        "text": "Check BAT-220V voltage; operate PSLL-104 test with trip bypass; confirm P-105 starts",
+        "sopRef": "SOP-LO-05 §3"
+      },
+      {
+        "id": "s4",
+        "text": "Record start times and battery voltage",
+        "sopRef": "SOP-LO-05 §4"
+      }
+    ],
+    "evidenceRequest": null,
+    "report": null
+  },
+  {
+    "caseId": "C-0412",
+    "createdAt": "2026-10-18T02:40:05+07:00",
+    "id": "T-4",
+    "type": "corrective",
+    "title": "Isolate cooler E-101A, run on E-101B",
+    "component": "E-101A",
+    "priority": "high",
+    "dueAt": "2026-10-18T03:30:00+07:00",
+    "estimateMin": 40,
+    "assigneeRole": "mechanical_shift_b",
+    "assigneeName": "Mechanical Shift B",
+    "status": "in_progress",
+    "createdBy": "ai",
+    "actionId": "A2",
+    "checklist": [
+      {
+        "id": "s1",
+        "text": "Open E-101B oil and cooling-water valves",
+        "sopRef": "SOP-LO-03 §2"
+      },
+      {
+        "id": "s2",
+        "text": "Close E-101A oil side, then water side",
+        "sopRef": "SOP-LO-03 §2"
+      },
+      {
+        "id": "s3",
+        "text": "Compare oil vs cooling-water pressure; photograph gauges",
+        "sopRef": "SOP-LO-03 §3"
+      }
+    ],
+    "evidenceRequest": null,
+    "report": null
+  }
+]

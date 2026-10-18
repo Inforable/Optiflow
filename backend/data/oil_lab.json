@@ -1,0 +1,25 @@
+{
+  "_note": "Synthetic lab history.",
+  "samples": [
+    {
+      "sampleDate": "2026-09-27",
+      "waterPpm": 140,
+      "iso4406": "17/15/12",
+      "tanOverNew": 0.05,
+      "viscosityChangePct": 1.2,
+      "rpvotPctNew": 78,
+      "foam": "10/0",
+      "verdict": "normal"
+    },
+    {
+      "sampleDate": "2026-08-27",
+      "waterPpm": 160,
+      "iso4406": "17/15/12",
+      "tanOverNew": 0.04,
+      "viscosityChangePct": 1.0,
+      "rpvotPctNew": 80,
+      "foam": "10/0",
+      "verdict": "normal"
+    }
+  ]
+}

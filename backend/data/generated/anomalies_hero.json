@@ -1,0 +1,62 @@
+{
+  "scenario": "hero",
+  "method": "fallback z-score vs healthy baseline (stand-in for AI.DETECT_ANOMALIES)",
+  "tags": [
+    {
+      "tag": "PT-104",
+      "anomalous": true,
+      "probability": 0.954,
+      "slopePerDay": -0.0609,
+      "z": 12.36
+    },
+    {
+      "tag": "PDT-101",
+      "anomalous": true,
+      "probability": 0.999,
+      "slopePerDay": 0.1215,
+      "z": 96.69
+    },
+    {
+      "tag": "LT-101",
+      "anomalous": true,
+      "probability": 0.999,
+      "slopePerDay": 0.3903,
+      "z": 38.56
+    },
+    {
+      "tag": "TE-201",
+      "anomalous": true,
+      "probability": 0.989,
+      "slopePerDay": 1.2114,
+      "z": 17.94
+    },
+    {
+      "tag": "IT-104A",
+      "anomalous": false,
+      "probability": 0.086,
+      "slopePerDay": -0.2216,
+      "z": 0.86
+    },
+    {
+      "tag": "PT-106",
+      "anomalous": false,
+      "probability": 0.086,
+      "slopePerDay": 0.011,
+      "z": 0.86
+    },
+    {
+      "tag": "VT-104A",
+      "anomalous": false,
+      "probability": 0.0,
+      "slopePerDay": -0.003,
+      "z": 0.0
+    },
+    {
+      "tag": "TT-102",
+      "anomalous": false,
+      "probability": 0.19,
+      "slopePerDay": 0.0907,
+      "z": 1.9
+    }
+  ]
+}

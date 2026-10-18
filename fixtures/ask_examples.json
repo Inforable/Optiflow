@@ -1,0 +1,46 @@
+[
+  {
+    "question": "Why is the filter loading?",
+    "caseId": "C-0412",
+    "response": {
+      "answer": "Header pressure is falling while filter dP rises and pump discharge stays flat, so the pressure-path rule points to filter loading. The reservoir level is also rising, which means something is entering the oil. In this system the likely source is cooling water through a tube leak in cooler E-101A, which emulsifies the oil and loads the filter (as in INC-2024-017). Confirm with an oil sample photo per SOP-LO-04 §2.",
+      "citations": [
+        {
+          "id": "R-T5",
+          "type": "rule",
+          "label": "R-T5 Pressure-path classifier"
+        },
+        {
+          "id": "F2",
+          "type": "failure_mode",
+          "label": "F2 Water ingress"
+        },
+        {
+          "id": "E-101A",
+          "type": "component",
+          "label": "Oil cooler A"
+        },
+        {
+          "id": "INC-2024-017",
+          "type": "incident",
+          "label": "INC-2024-017 Water ingress"
+        },
+        {
+          "id": "SOP-LO-04 §2",
+          "type": "sop",
+          "label": "SOP-LO-04 §2 Reservoir drain sample and photo"
+        }
+      ],
+      "refused": false
+    }
+  },
+  {
+    "question": "Who won the World Cup?",
+    "caseId": "C-0412",
+    "response": {
+      "answer": "0 sources, answer refused. I only answer from this plant's lube-oil knowledge graph and SOPs.",
+      "citations": [],
+      "refused": true
+    }
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "_note": "Synthetic delegation of authority.",
+  "actions": {
+    "filter_changeover": {
+      "level": "shift",
+      "needsCapex": false,
+      "needsShutdown": false
+    },
+    "cooler_changeover": {
+      "level": "shift",
+      "needsCapex": false,
+      "needsShutdown": false
+    },
+    "autostart_test": {
+      "level": "shift",
+      "needsCapex": false,
+      "needsShutdown": false
+    },
+    "oil_purification": {
+      "level": "plant",
+      "needsCapex": false,
+      "needsShutdown": false
+    },
+    "cooler_retube": {
+      "level": "plant",
+      "needsCapex": true,
+      "needsShutdown": true
+    },
+    "piping_modification": {
+      "level": "ho",
+      "needsCapex": true,
+      "needsShutdown": true
+    }
+  }
+}

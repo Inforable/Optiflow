@@ -53,6 +53,26 @@ def upload_evidence(body: EvidenceUpload, uid: str = Depends(current_uid)) -> di
     case.setdefault("evidence", [])
     case["evidence"] = [e for e in case["evidence"] if e["id"] != ev_id] + [evidence]
 
+    what = "Oil photo" if body.kind == "photo" else ("Voice note" if body.kind == "voice" else "Gauge photo")
+    finding = judged["finding"].split(":")[-1].strip() if judged["verdict"] == "NG" else judged["finding"]
+    prev_diag = case.get("diagnosis") or {}
+    prev_material = ((prev_diag.get("matrix") or {}).get("material") or {}).get("verdict")
+    already_diagnosed = bool(prev_diag.get("rootCause")) and bool((case.get("decision") or {}).get("actions"))
+    if already_diagnosed and prev_material == judged["verdict"]:
+        # Corroborating evidence: cite it on Material and keep the existing diagnosis and actions.
+        writer.write("corroborate", f"{label} corroborates Material {judged['verdict']}; diagnosis unchanged")
+        latest = store.get_case(body.sandboxId, body.caseId) or case
+        case["trace"] = latest.get("trace", case.get("trace", []))
+        material = case["diagnosis"]["matrix"]["material"]
+        if ev_id not in material.setdefault("citations", []):
+            material["citations"].append(ev_id)
+        case.setdefault("audit", {})["cached"] = bool(case.get("audit", {}).get("cached") or judge_cached)
+        case = Case.model_validate(case).model_dump(mode="json")
+        store.put_case(body.sandboxId, case)
+        notify(body.sandboxId, "manager", "evidence_received", "Evidence received",
+               f"{what} judged {judged['verdict']}: {finding}", {"caseId": body.caseId, "ticketId": body.ticketId})
+        return evidence
+
     matrix, root, struct_cached = restructure_with_evidence(body.sandboxId, case, writer)
     water = "E-101A" in root["path"]
     actions, adv_cached = advisor.advise(matrix, root, water=water)
@@ -85,8 +105,6 @@ def upload_evidence(body: EvidenceUpload, uid: str = Depends(current_uid)) -> di
     if ticket.get("status") == "open":
         ticket["status"] = "in_progress"
         store.put_ticket(body.sandboxId, ticket)
-    what = "Oil photo" if body.kind == "photo" else ("Voice note" if body.kind == "voice" else "Gauge photo")
-    finding = judged["finding"].split(":")[-1].strip() if judged["verdict"] == "NG" else judged["finding"]
     notify(body.sandboxId, "manager", "evidence_received", "Evidence received",
            f"{what} judged {judged['verdict']}: {finding}", {"caseId": body.caseId, "ticketId": body.ticketId})
     return evidence

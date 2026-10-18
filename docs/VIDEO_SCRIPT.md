@@ -9,7 +9,7 @@ Target length **3:00 to 3:02**. The FAQ says "under 3 minutes" and the T&C says 
 - English narration plus **burned-in English subtitles**. The Bahasa voice note is subtitled in English.
 - Show the live URL once (end card). Mention "synthetic demo plant" once on screen.
 - **Only real numbers.** The eval line uses numbers from a run against the live, deployed backend. If you do not have them, cut that line. Never show the "cached result" badge while saying the AI did it live; if it appears, re-take.
-- Narration is about 420 words at a calm 150 words per minute (about 2:50), which leaves room for pauses at the hero moment.
+- Narration is about 360 words, about 2:25 at a calm 150 words per minute. The remaining 35 seconds are pauses: the cold-open beat, the voice-note audio, the sync moment and the matrix flip. Do not fill them with extra words.
 
 ---
 

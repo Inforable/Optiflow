@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" width="400" height="520">
+  <title>Illustration: hazy, milky turbine oil sample (not a photo)</title>
+  <defs>
+    <radialGradient id="light" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#FFF7E0"/>
+      <stop offset="1" stop-color="#3A3326"/>
+    </radialGradient>
+    <linearGradient id="milk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E9DCC0"/>
+      <stop offset="0.5" stop-color="#D8C7A2"/>
+      <stop offset="1" stop-color="#BFAA80"/>
+    </linearGradient>
+    <filter id="haze"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="4"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.55 0"/></filter>
+    <clipPath id="liquid"><path d="M128 210 h144 v210 a24 24 0 0 1 -24 24 h-96 a24 24 0 0 1 -24 -24 z"/></clipPath>
+  </defs>
+  <rect width="400" height="520" fill="url(#light)"/>
+  <rect x="170" y="70" width="60" height="40" rx="6" fill="#2B2F38"/>
+  <path d="M160 110 h80 v40 l32 40 v230 a24 24 0 0 1 -24 24 h-96 a24 24 0 0 1 -24 -24 v-230 l32 -40 z" fill="#FFFFFF" fill-opacity="0.12" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="4"/>
+  <g clip-path="url(#liquid)">
+    <rect x="120" y="210" width="160" height="240" fill="url(#milk)"/>
+    <rect x="120" y="210" width="160" height="240" filter="url(#haze)"/>
+    <ellipse cx="200" cy="214" rx="72" ry="6" fill="#F5ECD8"/>
+  </g>
+  <path d="M142 230 v170" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="8" stroke-linecap="round"/>
+  <rect x="16" y="470" width="368" height="36" rx="8" fill="#0B0E14" fill-opacity="0.8"/>
+  <text x="200" y="494" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#F59E0B">ILLUSTRATION: hazy, milky oil (sample, not a photo)</text>
+</svg>

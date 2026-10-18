@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dev-dist/
+public/fixtures/
+.env
+.env.*
+!.env.example

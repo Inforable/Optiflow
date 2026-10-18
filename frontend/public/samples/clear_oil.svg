@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" width="400" height="520">
+  <title>Illustration: clear and bright amber turbine oil sample (not a photo)</title>
+  <defs>
+    <radialGradient id="light" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#FFF7E0"/>
+      <stop offset="1" stop-color="#3A3326"/>
+    </radialGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6C453" stop-opacity="0.85"/>
+      <stop offset="0.6" stop-color="#E29A1E" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#B86E0C" stop-opacity="0.85"/>
+    </linearGradient>
+    <clipPath id="liquid"><path d="M128 210 h144 v210 a24 24 0 0 1 -24 24 h-96 a24 24 0 0 1 -24 -24 z"/></clipPath>
+  </defs>
+  <rect width="400" height="520" fill="url(#light)"/>
+  <rect x="170" y="70" width="60" height="40" rx="6" fill="#2B2F38"/>
+  <path d="M160 110 h80 v40 l32 40 v230 a24 24 0 0 1 -24 24 h-96 a24 24 0 0 1 -24 -24 v-230 l32 -40 z" fill="#FFFFFF" fill-opacity="0.12" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="4"/>
+  <g clip-path="url(#liquid)">
+    <rect x="120" y="210" width="160" height="240" fill="url(#amber)"/>
+    <ellipse cx="200" cy="214" rx="72" ry="6" fill="#FBD98A"/>
+    <path d="M150 240 C 190 300, 210 330, 250 420" stroke="#FFF3C4" stroke-opacity="0.6" stroke-width="3" fill="none"/>
+  </g>
+  <path d="M142 230 v170" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+  <rect x="16" y="470" width="368" height="36" rx="8" fill="#0B0E14" fill-opacity="0.8"/>
+  <text x="200" y="494" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#10B981">ILLUSTRATION: clear and bright oil (sample, not a photo)</text>
+</svg>

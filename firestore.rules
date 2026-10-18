@@ -1,0 +1,48 @@
+rules_version = '2';
+
+// Optiflow LubeGuard Firestore rules (contracts/firestore.md).
+// Members of a sandbox (uid is a key of sandboxes/{sid}.members) may read everything
+// under it. Clients may write only checklist progress; every other write comes from
+// the backend through the Admin SDK, which bypasses these rules. codes/* is backend only.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function sandbox(sid) {
+      return get(/databases/$(database)/documents/sandboxes/$(sid));
+    }
+
+    function isMember(sid) {
+      return request.auth != null
+        && exists(/databases/$(database)/documents/sandboxes/$(sid))
+        && request.auth.uid in sandbox(sid).data.members;
+    }
+
+    function validProgress() {
+      let d = request.resource.data;
+      return d.keys().hasOnly(['done', 'result', 'note', 'reading', 'by', 'at'])
+        && d.done is bool
+        && (!('result' in d) || d.result == null || d.result in ['pass', 'fail', 'na'])
+        && (!('note' in d) || d.note == null || (d.note is string && d.note.size() <= 2000))
+        && (!('reading' in d) || d.reading == null || (d.reading is string && d.reading.size() <= 200));
+    }
+
+    match /sandboxes/{sid} {
+      allow read: if isMember(sid);
+      allow write: if false;
+
+      match /{document=**} {
+        allow read: if isMember(sid);
+        allow write: if false;
+      }
+
+      // Engineer app writes checklist progress directly (offline-safe).
+      match /tickets/{tid}/progress/{stepId} {
+        allow create, update: if isMember(sid) && validProgress();
+      }
+    }
+
+    match /codes/{code} {
+      allow read, write: if false;
+    }
+  }
+}

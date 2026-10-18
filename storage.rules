@@ -1,0 +1,27 @@
+rules_version = '2';
+
+// Optiflow LubeGuard Storage rules (contracts/firestore.md).
+// sandboxes/{sid}/evidence/{ticketId}/{file}: members may upload images or audio up to
+// 10 MB and may read. Membership is checked against the Firestore sandbox document.
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isMember(sid) {
+      return request.auth != null
+        && request.auth.uid in firestore.get(/databases/(default)/documents/sandboxes/$(sid)).data.members;
+    }
+
+    match /sandboxes/{sid}/evidence/{ticketId}/{file} {
+      allow read: if isMember(sid);
+      allow create, update: if isMember(sid)
+        && request.resource.size < 10 * 1024 * 1024
+        && (request.resource.contentType.matches('image/.*')
+            || request.resource.contentType.matches('audio/.*'));
+      allow delete: if false;
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

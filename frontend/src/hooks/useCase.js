@@ -1,0 +1,1 @@
+export { useCase } from './useData';

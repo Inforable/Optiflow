@@ -315,11 +315,32 @@ class EvidenceUpload(BaseModel):
     storagePath: str
     note: Optional[str] = None
     sample: Optional[Literal["hazy_oil", "clear_oil", "voice_hazy"]] = None
+    # Local development or Storage fallback: the media itself, base64-encoded
+    dataBase64: Optional[str] = None
+    mimeType: Optional[str] = None
 
 
 class ApproveRequest(BaseModel):
     sandboxId: str
     actionIds: list[str]
+
+
+class ProgressUpdate(BaseModel):
+    sandboxId: str
+    done: bool = True
+    result: Optional[Literal["pass", "fail", "na"]] = None
+    note: Optional[str] = None
+    reading: Optional[str] = None
+
+
+class Progress(BaseModel):
+    stepId: str
+    done: bool
+    result: Optional[Literal["pass", "fail", "na"]] = None
+    note: Optional[str] = None
+    reading: Optional[str] = None
+    by: str = "engineer"
+    at: str
 
 
 class CompleteRequest(BaseModel):
